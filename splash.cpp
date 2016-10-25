@@ -69,22 +69,24 @@ unsigned int Splash::loadModel(SDL_Surface *image, SDL_Rect imageRect)
 void Splash::show(void)
 {
     Mix_OpenAudio(22050, MIX_DEFAULT_FORMAT, 2, 4096);
-    music = Mix_LoadMUS("data/muzika/noo.wav");
+    music = Mix_LoadMUS("data/music/noo.wav");
     Mix_PlayMusic(music, -1);
 
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
     glPushMatrix();
     glOrtho(0, this->wWidth, 0, this->wHeight, -1, 1);
 
     // Begin render
 
-    glColor4ub(255, 255, 255, 255); // White color
+    glColor4ub(0, 0, 0, 255); // Background color 
     glBegin(GL_QUADS);
         glVertex2f(0, 0);
         glVertex2f(this->wWidth, 0);
         glVertex2f(this->wWidth, this->wHeight);
         glVertex2f(0, wHeight);
     glEnd();
+    glColor4ub(255, 255, 255, 255); // White color * Transparant overlay
 
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, this->texture);

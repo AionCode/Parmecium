@@ -121,7 +121,7 @@ unsigned int Player::loadModel(SDL_Surface *image, SDL_Rect imageRect)
 
 void Player::loadTexture(void)
 {
-    SDL_Surface *image = IMG_Load("data/player.png");
+    SDL_Surface *image = IMG_Load("data/pinky1.png");
     //SDL_Surface *image = IMG_Load("data/foka2.png");
     SDL_DisplayFormatAlpha(image);
     SDL_Rect imageRect;
