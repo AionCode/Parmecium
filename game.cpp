@@ -6,7 +6,7 @@
 
 Game::Game(void)
 {
-    this->width = 810;
+    this->width = 710;
     this->height = 550;
     this->caption = "Parmecium";
     this->isRunning = true;
