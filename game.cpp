@@ -90,10 +90,10 @@ void Game::splash(void)
 
 void Game::loadMap(void)
 {
-/*
+
     this->tile.push_back(new Tile(100, 100, 100, 100, TILE_TYPE_BLOCK));
     this->tile.push_back(new Tile(200, 200, 100, 100, TILE_TYPE_BLOCK));
-*/
+
 }
 
 void Game::render(void)
