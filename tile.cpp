@@ -25,7 +25,7 @@ Tile::~Tile(void)
 
 void Tile::render(void)
 {
-    glColor4ub(0, 0, 255, 255); // Blue color
+    glColor4ub(23, 9, 11, 255); // Blue color
     glBegin(GL_QUADS);
         glVertex2f(this->x, this->y);
         glVertex2f(this->x + this->width, this->y);
