@@ -1,5 +1,7 @@
-all: linux windows
+all: mac linux windows
 
+mac: main.o game.o player.o splash.o tile.o
+	g++ -o parmecium main.o game.o player.o splash.o tile.o -I/usr/local/include -L/usr/local/lib -I/Users/acika/SDL/include -L/Users/acika/SDL/include -lSDL2 -lSDLmain -lSDL -lGL -lSDL_image -lSDL_mixer
 
 linux: main.o game.o player.o splash.o tile.o
 	g++ -o parmecium main.o game.o player.o splash.o tile.o -lSDLmain -lSDL -lGL -lSDL_image -lSDL_mixer
