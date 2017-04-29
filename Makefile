@@ -21,8 +21,8 @@ splash.o: splash.cpp
 tile.o: tile.cpp
 	g++ -c -o tile.o tile.cpp
 
-
 windows: mainW.o gameW.o playerW.o
+
 	i686-w64-mingw32-g++ -o parmecium.exe mainW.o gameW.o playerW.o -static-libgcc -static-libstdc++ -lmingw32 -lSDLmain -lSDL -lopengl32 -lglu32 -lSDL_image
 
 mainW.o: main.cpp
